@@ -1,0 +1,60 @@
+name: "🚀 Custom Test Case 공유"
+description: "직접 작성한 xv6 테스트 케이스를 공유하고 기여합니다."
+title: "[TEST] <테스트할 기능이나 버그를 요약해주세요>"
+labels: []
+assignees: ["ESeokhwan", "wnsah814"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        xv6 과제에 도움이 되는 엣지 케이스를 공유해주셔서 감사합니다! 다른 학생들이 쉽게 재현해볼 수 있도록 아래 양식을 꼼꼼히 채워주세요.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "🎯 1. 테스트 목적 (Objective)"
+      description: "이 테스트 케이스가 무엇을 검증하기 위한 것인지 간략하게 설명해 주세요."
+      placeholder: "예) 이 테스트는 파이프가 꽉 찼을 때 부모와 자식 간의 데드락이 발생하는지 검증합니다."
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_code
+    attributes:
+      label: "💻 2. 테스트 코드 (Test Code)"
+      description: "`user/usertest.c`에 추가하거나 독립적인 유저 프로그램으로 실행할 C 코드를 작성해 주세요. `user/usertest.c`에 추가할 경우에는 성공적으로 통과 시 `0`, 에러/예상 외 결과 시 `1`, 수동 확인 필요 시 `2`를 반환하도록 작성해주세요."
+      value: |
+        ### `user/usertest.c`에 추가할 함수
+        ```c
+        int
+        my_custom_test(char *s)
+        {
+          // test logic here...
+
+          return 0;
+        }
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_to_run
+    attributes:
+      label: "🚀 3. 실행 방법 (How to Run)"
+      description: "다른 학우들이 이 테스트를 어떻게 실행해 볼 수 있는지 명령어를 적어주세요."
+      placeholder: |
+        예)
+        1. `user/usertest.c` 에 테스트 코드 함수를 붙여넣고 `quicktests` 배열에 해당 함수를 "custom_test"로 등록한다.
+        2. `make qemu` 후 `$ usertests custom_test`로 실행한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_output
+    attributes:
+      label: "🖥️ 4. 기대 결과 (Expected Output)"
+      description: "정상적인(버그가 없는) xv6 커널에서 이 테스트를 실행했을 때의 결과를 묘사해주세요. 자주 발생할 수 있을 법한 실패 시나리오가 있다면 같이 묘사해주세요."
+      placeholder: "예) 정상 작동 시 터미널에 'OK'가 출력되며 프로세스가 0으로 정상 종료됩니다. 락 반환을 잊은 경우 커널 패닉이 발생하거나 영원히 sleep 상태에 빠집니다."
+    validations:
+      required: true

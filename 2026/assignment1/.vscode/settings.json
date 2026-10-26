@@ -1,0 +1,7 @@
+{
+  "clangd.arguments": [
+    "--query-driver=/**/*riscv64*",
+    "--header-insertion=never",
+    "--compile-commands-dir=${workspaceFolder}"
+  ]
+}

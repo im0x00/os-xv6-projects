@@ -1,0 +1,12 @@
+title: "[질문 범위(assignment1, proj1, proj2, ...)] <질문 내용을 요약해주세요>"
+labels: ["Q&A"]
+
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: "🎯 1. 테스트 목적 (Objective)"
+      description: "이 테스트 케이스가 무엇을 검증하기 위한 것인지 간략하게 설명해 주세요. 제목에 충분히 설명을 했다면 N/T, 제곧내, ㅈㄱㄴ 등 으로 해도 됩니다."
+      placeholder: "예) N/T."
+    validations:
+      required: true

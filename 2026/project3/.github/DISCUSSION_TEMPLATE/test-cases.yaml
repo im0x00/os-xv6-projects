@@ -1,0 +1,49 @@
+title: "[과제 이름(assignment1, proj1, proj2, ...)] <테스트할 기능이나 버그를 요약해주세요>"
+labels: ["test-case", "contribution"]
+
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: "🎯 1. 테스트 목적 (Objective)"
+      description: "이 테스트 케이스가 무엇을 검증하기 위한 것인지 간략하게 설명해 주세요."
+      placeholder: "예) 이 테스트는 파이프가 꽉 찼을 때 부모와 자식 간의 데드락이 발생하는지 검증합니다."
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_code
+    attributes:
+      label: "💻 2. 테스트 코드 (Test Code)"
+      description: "`user/usertest.c`에 추가하거나 독립적인 유저 프로그램으로 실행할 C 코드를 작성해 주세요."
+      value: |
+        ```c
+        int
+        my_custom_test(char *s)
+        {
+          // test logic here...
+
+          return 0;
+        }
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_to_run
+    attributes:
+      label: "🚀 3. 실행 방법 (How to Run)"
+      description: "다른 학우들이 이 테스트를 어떻게 실행해 볼 수 있는지 명령어를 적어주세요."
+      placeholder: |
+        1. user/usertest.c 에 테스트 코드 함수를 붙여넣고...
+        2. make qemu 후 $ usertests custom_test...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_output
+    attributes:
+      label: "🖥️ 4. 기대 결과 (Expected Output)"
+      description: "정상적인 커널에서 실행했을 때의 결과와 실패 시나리오를 묘사해주세요."
+    validations:
+      required: true

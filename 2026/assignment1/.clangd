@@ -1,0 +1,15 @@
+CompileFlags:
+  Add: [-std=gnu11, -Wall, -Wno-gnu-designator]
+  Remove: [
+    "-mno-fpu",
+    "-fno-tree-loop-distribute-patterns",
+    "-mno-relax",
+    "-mcmodel=medany"
+  ]
+
+---
+If:
+  PathMatch: .*\.h
+  PathExclude: kernel/types\.h
+CompileFlags:
+  Add: [-include=kernel/types.h, -include=kernel/param.h, -include=kernel/riscv.h, -include=kernel/spinlock.h, -include=kernel/sleeplock.h, -include=kernel/fs.h]
