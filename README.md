@@ -14,10 +14,3 @@ Source commits:
 - 2026/project2: 093e72a 2026-05-26 completed
 - 2026/project3: b60e5f8 2026-06-19 pdf update
 
-## 2025 — restored from VS Code local history
-Only files edited in VS Code survive. Untouched xv6-riscv base files are missing;
-overlay these on a clean xv6-riscv tree to build. Last-save time per file: `2025-restored-from-vscode/RESTORE_LOG.tsv`.
-- os_assignment/assignment-2023076599 — system call practice
-- os_assignment/project01-* (and temp/) — MLFQ scheduler
-- os_proj2, project02_OS — clone/join threads
-- os_assignment/project03-2023076599 — file system
